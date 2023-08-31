@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,600;1,400&display=swap');
 
+/*variables*/
+:root {
+    --dark-bg-color: #001427; 
+    --light-bg-color: rgba(250,250,250,1);
+    --main-color: rgb(228,241,255);
+    --highlight-color: #c6a664;
+    --alt-color: #495867; 
+}
+
 /*reset*/
 html {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 10px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 }
@@ -28,9 +37,25 @@ img {
 }
 
 /*styles*/
+body {
+    background-color: var(--dark-bg-color);
+    background-image: url('#');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: absolute;
+    width: 100vw;
+    background-color: rgba(250,250,250,0.8);
+}
+
 nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    height: 8rem;
+    box-shadow: #001427;
 }
 
 nav ul {
@@ -39,26 +64,70 @@ nav ul {
 
 .logo {
     display: block;
-    height: 3rem;
-    padding: 1rem;
+    height: 9rem;
+    padding: 2rem;
     margin-right: auto;
 }
 
 .menu_item {
     display: block;
+    margin: 0.5rem;
     padding: 1rem;
+}
+
+.social .menu_item {
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+}
+
+.social {
+    border-left: 0.2rem solid var(--highlight-color);
 }
 
 .menu_item a {
     text-decoration: none;
+    font-size: 1.6rem;
     font-weight: 600;
-    color: #000;
+    color: var(--alt-color);
+}
+
+.menu_item a:hover {
+    color: var(--highlight-color);
+}
+
+.menu_item:first-child {
+    margin-left: 5rem;
+}
+
+
+.menu_item:last-child {
+    margin-right: 5rem;
 }
 
 .burger_btn {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--alt-color);
+    margin: 2rem;
+    border-radius: 1rem;
+    display: none;
+}
+
+.burger_line {
+    position: relative;
     display: block;
-    width: 3rem;
-    height: 3rem;
-    background-color: #000;
-    margin: 1rem;
+    background-color: var(--main-color);
+    height: 0.3rem;
+    width: 60%;
+    left: 20%;
+    border-radius: 0.15rem;
+}
+
+.burger_line:first-child, .burger_line:last-child {
+    width:40%;
+    left: 30%;
 }
