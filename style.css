@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,600;1,400&display=swap');
+
 /*reset*/
 html {
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
 }
   
 *, *:before, *:after {
@@ -21,4 +25,40 @@ ol, ul {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/*styles*/
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+}
+
+.logo {
+    display: block;
+    height: 3rem;
+    padding: 1rem;
+    margin-right: auto;
+}
+
+.menu_item {
+    display: block;
+    padding: 1rem;
+}
+
+.menu_item a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+}
+
+.burger_btn {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background-color: #000;
+    margin: 1rem;
 }
